@@ -15,20 +15,46 @@
 @gray-light:             lighten(#000, 60%);   // #999
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 
+// Palet
+// -------------------------
+
+@purple-darker:         #280671;
+@purple-dark:           #472B83;
+@purple:                #4312AE;
+@purple-light:          #7446D7;
+@purple-lighter:        #8E6DD7;
+
+@pink-darker:           #79005E;
+@pink-dark:             #8B2374;
+@pink:                  #B90091;
+@pink-light:            #DC37B8;
+@pink-lighter:          #DC63C2;
+
+@blue-darker:           #04346C;
+@blue-dark:             #274E7D;
+@blue:                  #0E53A7;
+@blue-light:            #4284D3;
+@blue-lighter:          #6899D3;
+
+
 // Brand colors
 // -------------------------
 
-@brand-primary:         #428bca;
-@brand-success:         #5cb85c;
-@brand-warning:         #f0ad4e;
-@brand-danger:          #d9534f;
-@brand-info:            #5bc0de;
+@brand-primary:         @purple-light;
+@brand-success:         #24913C;
+//@brand-success:         #5cb85c;
+@brand-warning:         #7D9F00;
+//@brand-warning:         #f0ad4e;
+@brand-danger:          #BF3030;
+//@brand-danger:          #d9534f;
+@brand-info:            @purple-light;
+//@brand-info:            #5bc0de;
 
 // Scaffolding
 // -------------------------
 
-@body-bg:               #ffffff;
-@text-color:            @gray-dark;
+@body-bg:               @purple-dark;
+@text-color:            @gray-lighter;
 
 // Links
 // -------------------------
@@ -82,9 +108,9 @@
 @table-cell-padding:                 8px;
 @table-condensed-cell-padding:       5px;
 
-@table-bg:                           transparent; // overall background-color
-@table-bg-accent:                    #f9f9f9; // for striping
-@table-bg-hover:                     #f5f5f5;
+@table-bg:                           @gray-dark; // overall background-color
+@table-bg-accent:                    @gray-lighter; // for striping
+@table-bg-hover:                     @gray-light;
 @table-bg-active:                    @table-bg-hover;
 
 @table-border-color:                 #ddd; // table and cell border
@@ -124,12 +150,12 @@
 // -------------------------
 
 @input-bg:                       #fff;
-@input-bg-disabled:              @gray-lighter;
+@input-bg-disabled:              @gray-darker;
 
 @input-border:                   #ccc;
 @input-border-radius:            @border-radius-base;
 
-@input-color-placeholder:        @gray-light;
+@input-color-placeholder:        @gray-dark;
 
 @input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
 @input-height-large:             (ceil(@font-size-large * @line-height-base) + (@padding-large-vertical * 2) + 2);
@@ -151,7 +177,7 @@
 @dropdown-link-active-color:     #fff;
 @dropdown-link-active-bg:        @component-active-bg;
 
-@dropdown-link-color:            @gray-dark;
+@dropdown-link-color:            @gray-light;
 @dropdown-link-hover-color:      #fff;
 @dropdown-link-hover-bg:         @dropdown-link-active-bg;
 
@@ -208,11 +234,11 @@
 // Inverted navbar
 //
 // Reset inverted navbar basics
-@navbar-inverse-color:                      @gray-light;
+@navbar-inverse-color:                      @gray-dark;
 @navbar-inverse-bg:                         #222;
 
 // Inverted navbar links
-@navbar-inverse-link-color:                 @gray-light;
+@navbar-inverse-link-color:                 @gray-dark;
 @navbar-inverse-link-hover-color:           #fff;
 @navbar-inverse-link-hover-bg:              transparent;
 @navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
@@ -241,10 +267,10 @@
 // Navs
 // -------------------------
 
-@nav-link-hover-bg:                         @gray-lighter;
+@nav-link-hover-bg:                         @gray-darker;
 
-@nav-disabled-link-color:                   @gray-light;
-@nav-disabled-link-hover-color:             @gray-light;
+@nav-disabled-link-color:                   @gray-dark;
+@nav-disabled-link-hover-color:             @gray-dark;
 
 @nav-open-link-hover-color:                 #fff;
 @nav-open-caret-border-color:               #fff;
@@ -252,7 +278,7 @@
 // Tabs
 @nav-tabs-border-color:                     #ddd;
 
-@nav-tabs-link-hover-border-color:          @gray-lighter;
+@nav-tabs-link-hover-border-color:          @gray-darker;
 
 @nav-tabs-active-link-hover-bg:             @body-bg;
 @nav-tabs-active-link-hover-color:          @gray;
@@ -272,20 +298,20 @@
 @pagination-bg:                        #fff;
 @pagination-border:                    #ddd;
 @pagination-active-bg:                 #f5f5f5;
-@pagination-active-color:              @gray-light;
-@pagination-disabled-color:            @gray-light;
+@pagination-active-color:              @gray-dark;
+@pagination-disabled-color:            @gray-dark;
 
 // Pager
 // -------------------------
 
 @pager-border-radius:                  15px;
-@pager-disabled-color:                 @gray-light;
+@pager-disabled-color:                 @gray-dark;
 
 
 // Jumbotron
 // -------------------------
 
-@jumbotron-bg:                   @gray-lighter;
+@jumbotron-bg:                   @gray-darker;
 @jumbotron-heading-color:        inherit;
 @jumbotron-lead-color:           inherit;
 
@@ -293,20 +319,20 @@
 // Form states and alerts
 // -------------------------
 
-@state-warning-text:             #c09853;
-@state-warning-bg:               #fcf8e3;
+@state-warning-text:             #BFAA30;
+@state-warning-bg:               #BFBA30;
 @state-warning-border:           darken(spin(@state-warning-bg, -10), 3%);
 
-@state-danger-text:              #b94a48;
-@state-danger-bg:                #f2dede;
+@state-danger-text:              #B12C49;
+@state-danger-bg:                #BF4930;
 @state-danger-border:            darken(spin(@state-danger-bg, -10), 3%);
 
-@state-success-text:             #468847;
-@state-success-bg:               #dff0d8;
+@state-success-text:             #62AA2A;
+@state-success-bg:               #24913C;
 @state-success-border:           darken(spin(@state-success-bg, -10), 5%);
 
-@state-info-text:                #3a87ad;
-@state-info-bg:                  #d9edf7;
+@state-info-text:                @blue-light;
+@state-info-bg:                  @blue-lighter;
 @state-info-border:              darken(spin(@state-info-bg, -10), 7%);
 
 
@@ -413,13 +439,13 @@
 
 // Panels
 // -------------------------
-@panel-bg:                    #fff;
-@panel-border:                #ddd;
+@panel-bg:                    @gray;
+@panel-border:                @gray-darker;
 @panel-border-radius:         @border-radius-base;
-@panel-heading-bg:            #f5f5f5;
-@panel-footer-bg:             #f5f5f5;
+@panel-heading-bg:            @gray-dark;
+@panel-footer-bg:             @gray-dark;
 
-@panel-primary-text:          #fff;
+@panel-primary-text:          @gray-lighter;
 @panel-primary-border:        @brand-primary;
 @panel-primary-heading-bg:    @brand-primary;
 
@@ -463,7 +489,7 @@
 @badge-color:                 #fff;
 @badge-link-hover-color:      #fff;
 
-@badge-bg:                    @gray-light;
+@badge-bg:                    @gray-dark;
 @badge-active-color:          @link-color;
 @badge-active-bg:             #fff;
 
@@ -472,7 +498,7 @@
 // -------------------------
 @breadcrumb-bg:               #f5f5f5;
 @breadcrumb-color:            #ccc;
-@breadcrumb-active-color:     @gray-light;
+@breadcrumb-active-color:     @gray-dark;
 
 
 // Carousel
@@ -503,18 +529,18 @@
 
 // Type
 // ------------------------
-@text-muted:                  @gray-light;
-@abbr-border-color:           @gray-light;
-@headings-small-color:        @gray-light;
-@blockquote-small-color:      @gray-light;
-@blockquote-border-color:     @gray-lighter;
-@page-header-border-color:    @gray-lighter;
+@text-muted:                  @gray-dark;
+@abbr-border-color:           @gray-dark;
+@headings-small-color:        @gray-dark;
+@blockquote-small-color:      @gray-dark;
+@blockquote-border-color:     @gray-darker;
+@page-header-border-color:    @gray-darker;
 
 // Miscellaneous
 // -------------------------
 
 // Hr border color
-@hr-border:                   @gray-lighter;
+@hr-border:                   @gray-darker;
 
 // Horizontal forms & lists
 @component-offset-horizontal: 180px;
